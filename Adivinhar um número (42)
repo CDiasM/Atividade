@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int numero, chute;
+
+    numero = 42;
+    do {
+        printf("Adivinhe o número: ");
+        scanf("%d", &chute);
+
+        if (chute < numero) {
+            printf("Muito baixo!\n");
+        } else if (chute > numero) {
+            printf("Muito alto!\n");
+        }
+    } while (chute != numero);
+
+    printf("Parabéns! Você acertou!\n");
+    return 0;
+}
