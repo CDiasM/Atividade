@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, numero, maior, i = 0;
+
+    printf("Quantos números você quer inserir? ");
+    scanf("%d", &n);
+
+    printf("Digite o primeiro número: ");
+    scanf("%d", &maior); // Primeiro número é o maior inicial
+
+    while (i < n - 1) {
+        printf("Digite o próximo número: ");
+        scanf("%d", &numero);
+
+        if (numero > maior) {
+            maior = numero;
+        }
+        i++;
+    }
+
+    printf("O maior número é: %d\n", maior);
+    return 0;
+}
