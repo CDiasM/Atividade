@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int tamanho, i, j;
+
+    printf("Digite o tamanho da sequência: ");
+    scanf("%d", &tamanho);
+
+    for (i = 1; i <= tamanho; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
