@@ -1,0 +1,20 @@
+// Resolução Atividade Prática 1
+//Crie um programa que solicite ao usuário para criar uma senha com valores inteiros.
+//O programa deve validar a senha e informar se ela é válida ou não.
+//O usuário deve ter a opção de tentar criar uma nova senha até fornecer uma senha válida.
+#include <stdio.h>
+int main() {
+int senha, senhaDoSistema;
+printf("Crie uma senha com números inteiros: ");
+scanf("%d", & senhaDoSistema);
+printf("---------------------------------------\n");
+printf("\nAcesso ao Sistema: digite sua senha: ");
+scanf("%d", & senha);
+while (senha != senhaDoSistema) {
+printf("Senha inválida. Tente novamente: ");
+scanf("%d", &senha);
+}
+printf("\n---------------------------------------\n");
+printf("Acesso permitido. Senha válida!\n");
+return 0;
+}
