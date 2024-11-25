@@ -1,0 +1,33 @@
+//Crie urn programa que leia a idade de uma pessoa e classifique-a em diferentes categorias: 
+//"Crianya" (0-12 anos), "Adolescente" (13- 17 anos), "Adulto" (18-64 anos) e "Idoso" (65 anos ou mais). 
+//0 programa deve continuar pedindo idades e classificayoes ate que 0 usuario insira um valor negativo para encerrar.
+#include <stdio.h>
+
+void classificarIdade(int idade) {
+    if (idade >= 0 && idade <= 12) {
+        printf("Criança\n");
+    } else if (idade >= 13 && idade <= 17) {
+        printf("Adolescente\n");
+    } else if (idade >= 18 && idade <= 64) {
+        printf("Adulto\n");
+    } else if (idade >= 65) {
+        printf("Idoso\n");
+    } else {
+        printf("Idade inválida\n");
+    }
+}
+
+int main() {
+    int idade;
+
+    while (1) {
+        printf("Digite a idade (valor negativo para encerrar): ");
+        scanf("%d", &idade);
+
+        if (idade < 0) break;
+
+        classificarIdade(idade);
+    }
+
+    return 0;
+}
