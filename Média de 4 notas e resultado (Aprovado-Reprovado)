@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    float nota, soma = 0;
+    int i;
+
+    printf("Digite as 4 notas do aluno:\n");
+    for (i = 0; i < 4; i++) {
+        scanf("%f", &nota);
+        soma += nota;
+    }
+
+    float media = soma / 4.0;
+
+    printf("Média: %.2f\n", media);
+    if (media >= 6) {
+        printf("Aprovado\n");
+    } else {
+        printf("Reprovado\n");
+    }
+
+    return 0;
+}
