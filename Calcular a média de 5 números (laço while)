@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int i = 0, numero, soma = 0;
+
+    while (i < 5) {
+        printf("Digite um número: ");
+        scanf("%d", &numero);
+        soma += numero;
+        i++;
+    }
+
+    printf("Média: %.2f\n", soma / 5.0);
+    return 0;
+}
