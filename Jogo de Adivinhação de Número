@@ -1,0 +1,33 @@
+//Crie um programa que gere um número aleatório entre 1 e 50 e peça ao usuário para adivinhar o número. 
+//O programa deve informar se o palpite do usuário é muito alto, muito baixo ou correto.
+//O usuário deve ter até 5 tentativas para adivinhar o número corretamente.
+#include <stdio.h>
+
+int main() {
+    int numero = 25; // Número a ser adivinhado
+    int numeroSorte, tentativas = 0;
+
+    printf("Adivinhe o número entre 1 e 50:\n");
+
+    while (tentativas < 5) {
+        printf("Tentativa %d: ", tentativas + 1);
+        scanf("%d", &numeroSorte);
+
+        if (numeroSorte == numero) {
+            printf("Parabéns! Você acertou o número!\n");
+            break;
+        } else if (numeroSorte > numero) {
+            printf("Muito alto!\n");
+        } else {
+            printf("Muito baixo!\n");
+        }
+
+        tentativas++;
+    }
+
+    if (numeroSorte != numero) {
+        printf("Você perdeu! O número era %d. Você fez %d tentativas.\n", numero, tentativas);
+    }
+
+    return 0;
+}
