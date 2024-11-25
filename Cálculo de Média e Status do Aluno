@@ -1,0 +1,50 @@
+//Crie um programa que leia as notas de um aluno e calcule a media.
+//0 programa deve informar se 0 aluno foi aprovado (media >= 7), reprovado (media < 4) ou esta em recuperayao (media entre 4 e 7). 
+//0 programa deve permitir que 0 usuario insira novas notas e calcule a media ate que deseje encerrar.
+
+#include <stdio.h>
+
+float calcularMedia(int notas[], int n) {
+    int i;
+    float soma = 0;
+
+    for (i = 0; i < n; i++) {
+        soma += notas[i];
+    }
+
+    return soma / n;
+}
+
+void verificarStatus(float media) {
+    if (media >= 7) {
+        printf("Aprovado!\n");
+    } else if (media >= 4) {
+        printf("Recuperação\n");
+    } else {
+        printf("Reprovado\n");
+    }
+}
+
+int main() {
+    int n, i;
+
+    while (1) {
+        printf("Quantas notas deseja inserir (0 para encerrar)? ");
+        scanf("%d", &n);
+
+        if (n == 0) break;
+
+        int notas[n];
+
+        for (i = 0; i < n; i++) {
+            printf("Digite a nota %d: ", i + 1);
+            scanf("%d", &notas[i]);
+        }
+
+        float media = calcularMedia(notas, n);
+        printf("Média: %.2f\n", media);
+        verificarStatus(media);
+    }
+
+    return 0;
+}
